@@ -1,0 +1,25 @@
+import random
+letters=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+          'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y' , 'Z']
+symbols=['!','@','#','$','%','^','*','&','(',')','>','<','?']
+numbers=['1','2','3','4','5','6','7','8','9','0']
+print("WELCOME TO PASSWORD GENERATOR")
+n_letters=int(input("how many letters u want in your password?"))
+n_symbols=int(input("how many symbols u want in your password?"))
+n_numbers=int(input("how many numbers u want in your password?"))
+password1=''
+for i in range(n_letters):
+    password1=password1+random.choice(letters)
+password2=''
+for j in range(n_symbols):
+    password2=password2+random.choice(symbols)
+password3=''
+for k in range(n_numbers):
+        password3=password3+random.choice(numbers)
+password=password1+password2+password3
+x=list(password)
+random.shuffle(x)
+finalone=""
+for i in x:
+    finalone=finalone+i
+print(finalone)
